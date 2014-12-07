@@ -7,15 +7,22 @@
 //
 
 import Cocoa
+import WebKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
+    @IBOutlet weak var theWebView: WebView!
+    
+    let url = "http://joefrizzell.com"
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        let requestURL = NSURL(string:url)
+        let request = NSURLRequest(URL: requestURL!)
+        self.theWebView.mainFrame.loadRequest(request)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
