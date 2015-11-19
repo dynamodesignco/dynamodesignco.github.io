@@ -1,4 +1,10 @@
+body{
+background-color: black;
+}
 div.w50c {
 	width:50%;
-	margin-right:25%;
+	margin-left:25%;
+}
+img.w100 {
+	width:100%;
 }
